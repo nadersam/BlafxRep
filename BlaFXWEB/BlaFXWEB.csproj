@@ -1,0 +1,1068 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13A9A34C-2DF4-4B55-A62F-8C1C63C7003E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlaFXWEB</RootNamespace>
+    <AssemblyName>BlaFXWEB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\bootstrap-multiselect.css" />
+    <Content Include="assets\css\Fonts.css" />
+    <Content Include="assets\css\images\ui-icons_444444_256x240.png" />
+    <Content Include="assets\css\images\ui-icons_555555_256x240.png" />
+    <Content Include="assets\css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="assets\css\main_style.css" />
+    <Content Include="assets\fonts-master\apache\opensans\DESCRIPTION.en_us.html" />
+    <Content Include="assets\fonts-master\apache\opensans\LICENSE.txt" />
+    <Content Include="assets\fonts-master\apache\oswald\DESCRIPTION.en_us.html" />
+    <Content Include="assets\fonts-master\apache\oswald\FONTLOG.txt" />
+    <Content Include="assets\fonts-master\apache\oswald\OFL.txt" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\COPYRIGHT.txt" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\DESCRIPTION.en_us.html" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\LICENSE.txt" />
+    <Content Include="assets\fonts-master\apache\roboto\COPYRIGHT.txt" />
+    <Content Include="assets\fonts-master\apache\roboto\DESCRIPTION.en_us.html" />
+    <Content Include="assets\fonts-master\apache\roboto\LICENSE.txt" />
+    <Content Include="assets\images\001.png" />
+    <Content Include="assets\images\bg.png" />
+    <Content Include="assets\images\logo_saudi.jpg" />
+    <Content Include="assets\js\bootstrap-multiselect.js" />
+    <Content Include="assets\js\healthst.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.multiselect.js" />
+    <Content Include="assets\js\main_js.js" />
+    <Content Include="fonts\font-awesome\font-awesome\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Images\tryloading.png" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\knockout-3.4.0.js" />
+    <Content Include="scripts\Search.js" />
+    <Content Include="scripts\toastr.min.css" />
+    <Content Include="scripts\toastr.min.js" />
+    <Content Include="Index.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts-master\apache\opensans\METADATA.pb" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-Bold.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-BoldItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-ExtraBold.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-Italic.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-Light.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-LightItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-Regular.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-Semibold.ttf" />
+    <Content Include="assets\fonts-master\apache\opensans\OpenSans-SemiboldItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\oswald\METADATA.pb" />
+    <Content Include="assets\fonts-master\apache\oswald\Oswald-Bold.ttf" />
+    <Content Include="assets\fonts-master\apache\oswald\Oswald-Light.ttf" />
+    <Content Include="assets\fonts-master\apache\oswald\Oswald-Regular.ttf" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\METADATA.pb" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\RobotoCondensed-Bold.ttf" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\RobotoCondensed-BoldItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\RobotoCondensed-Italic.ttf" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\RobotoCondensed-Light.ttf" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\RobotoCondensed-LightItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\robotocondensed\RobotoCondensed-Regular.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\METADATA.pb" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Black.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Bold.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Italic.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Light.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-LightItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Medium.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Regular.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-Thin.ttf" />
+    <Content Include="assets\fonts-master\apache\roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\font-awesome\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\font-awesome\font\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\fonts-master\apache\aclonica\" />
+    <Folder Include="assets\fonts-master\apache\arimo\" />
+    <Folder Include="assets\fonts-master\apache\calligraffitti\" />
+    <Folder Include="assets\fonts-master\apache\cherrycreamsoda\" />
+    <Folder Include="assets\fonts-master\apache\chewy\" />
+    <Folder Include="assets\fonts-master\apache\comingsoon\" />
+    <Folder Include="assets\fonts-master\apache\cousine\" />
+    <Folder Include="assets\fonts-master\apache\craftygirls\" />
+    <Folder Include="assets\fonts-master\apache\creepstercaps\" />
+    <Folder Include="assets\fonts-master\apache\crushed\" />
+    <Folder Include="assets\fonts-master\apache\droidarabickufi\" />
+    <Folder Include="assets\fonts-master\apache\droidarabicnaskh\" />
+    <Folder Include="assets\fonts-master\apache\droidsansethiopic\" />
+    <Folder Include="assets\fonts-master\apache\droidsansjapanese\" />
+    <Folder Include="assets\fonts-master\apache\droidsansmono\" />
+    <Folder Include="assets\fonts-master\apache\droidsanstamil\" />
+    <Folder Include="assets\fonts-master\apache\droidsansthai\" />
+    <Folder Include="assets\fonts-master\apache\droidsans\" />
+    <Folder Include="assets\fonts-master\apache\droidserifthai\" />
+    <Folder Include="assets\fonts-master\apache\droidserif\" />
+    <Folder Include="assets\fonts-master\apache\fontdinerswanky\" />
+    <Folder Include="assets\fonts-master\apache\homemadeapple\" />
+    <Folder Include="assets\fonts-master\apache\irishgrover\" />
+    <Folder Include="assets\fonts-master\apache\irishgrowler\" />
+    <Folder Include="assets\fonts-master\apache\jsmathcmbx10\" />
+    <Folder Include="assets\fonts-master\apache\jsmathcmex10\" />
+    <Folder Include="assets\fonts-master\apache\jsmathcmmi10\" />
+    <Folder Include="assets\fonts-master\apache\jsmathcmr10\" />
+    <Folder Include="assets\fonts-master\apache\jsmathcmsy10\" />
+    <Folder Include="assets\fonts-master\apache\jsmathcmti10\" />
+    <Folder Include="assets\fonts-master\apache\justanotherhand\" />
+    <Folder Include="assets\fonts-master\apache\kranky\" />
+    <Folder Include="assets\fonts-master\apache\luckiestguy\" />
+    <Folder Include="assets\fonts-master\apache\maidenorange\" />
+    <Folder Include="assets\fonts-master\apache\montez\" />
+    <Folder Include="assets\fonts-master\apache\mountainsofchristmas\" />
+    <Folder Include="assets\fonts-master\apache\nokora\" />
+    <Folder Include="assets\fonts-master\apache\opensanscondensed\" />
+    <Folder Include="assets\fonts-master\apache\opensanshebrewcondensed\" />
+    <Folder Include="assets\fonts-master\apache\opensanshebrew\" />
+    <Folder Include="assets\fonts-master\apache\permanentmarker\" />
+    <Folder Include="assets\fonts-master\apache\rancho\" />
+    <Folder Include="assets\fonts-master\apache\redressed\" />
+    <Folder Include="assets\fonts-master\apache\robotomono\" />
+    <Folder Include="assets\fonts-master\apache\robotoslab\" />
+    <Folder Include="assets\fonts-master\apache\rochester\" />
+    <Folder Include="assets\fonts-master\apache\rocksalt\" />
+    <Folder Include="assets\fonts-master\apache\satisfy\" />
+    <Folder Include="assets\fonts-master\apache\schoolbell\" />
+    <Folder Include="assets\fonts-master\apache\slackey\" />
+    <Folder Include="assets\fonts-master\apache\smokum\" />
+    <Folder Include="assets\fonts-master\apache\specialelite\" />
+    <Folder Include="assets\fonts-master\apache\sunshiney\" />
+    <Folder Include="assets\fonts-master\apache\syncopate\" />
+    <Folder Include="assets\fonts-master\apache\tinos\" />
+    <Folder Include="assets\fonts-master\apache\ultra\" />
+    <Folder Include="assets\fonts-master\apache\unkempt\" />
+    <Folder Include="assets\fonts-master\apache\walterturncoat\" />
+    <Folder Include="assets\fonts-master\apache\yellowtail\" />
+    <Folder Include="assets\fonts-master\ofl\abeezee\" />
+    <Folder Include="assets\fonts-master\ofl\abel\" />
+    <Folder Include="assets\fonts-master\ofl\abhayalibre\" />
+    <Folder Include="assets\fonts-master\ofl\abrilfatface\" />
+    <Folder Include="assets\fonts-master\ofl\abyssinicasil\" />
+    <Folder Include="assets\fonts-master\ofl\acme\" />
+    <Folder Include="assets\fonts-master\ofl\actor\" />
+    <Folder Include="assets\fonts-master\ofl\adamina\" />
+    <Folder Include="assets\fonts-master\ofl\adobeblank\" />
+    <Folder Include="assets\fonts-master\ofl\adventpro\" />
+    <Folder Include="assets\fonts-master\ofl\aguafinascript\" />
+    <Folder Include="assets\fonts-master\ofl\akronim\" />
+    <Folder Include="assets\fonts-master\ofl\aksarabaligalang\" />
+    <Folder Include="assets\fonts-master\ofl\aladin\" />
+    <Folder Include="assets\fonts-master\ofl\aldrich\" />
+    <Folder Include="assets\fonts-master\ofl\alefhebrew\" />
+    <Folder Include="assets\fonts-master\ofl\alef\" />
+    <Folder Include="assets\fonts-master\ofl\alegreyasanssc\" />
+    <Folder Include="assets\fonts-master\ofl\alegreyasans\" />
+    <Folder Include="assets\fonts-master\ofl\alegreyasc\" />
+    <Folder Include="assets\fonts-master\ofl\alegreya\" />
+    <Folder Include="assets\fonts-master\ofl\alexbrush\" />
+    <Folder Include="assets\fonts-master\ofl\alfaslabone\" />
+    <Folder Include="assets\fonts-master\ofl\alice\" />
+    <Folder Include="assets\fonts-master\ofl\alikeangular\" />
+    <Folder Include="assets\fonts-master\ofl\alike\" />
+    <Folder Include="assets\fonts-master\ofl\allan\" />
+    <Folder Include="assets\fonts-master\ofl\allertastencil\" />
+    <Folder Include="assets\fonts-master\ofl\allerta\" />
+    <Folder Include="assets\fonts-master\ofl\allura\" />
+    <Folder Include="assets\fonts-master\ofl\almendradisplay\" />
+    <Folder Include="assets\fonts-master\ofl\almendrasc\" />
+    <Folder Include="assets\fonts-master\ofl\almendra\" />
+    <Folder Include="assets\fonts-master\ofl\amarante\" />
+    <Folder Include="assets\fonts-master\ofl\amaranth\" />
+    <Folder Include="assets\fonts-master\ofl\amaticsc\" />
+    <Folder Include="assets\fonts-master\ofl\amethysta\" />
+    <Folder Include="assets\fonts-master\ofl\amiri\" />
+    <Folder Include="assets\fonts-master\ofl\amita\" />
+    <Folder Include="assets\fonts-master\ofl\anaheim\" />
+    <Folder Include="assets\fonts-master\ofl\andadasc\" />
+    <Folder Include="assets\fonts-master\ofl\andada\" />
+    <Folder Include="assets\fonts-master\ofl\andika\" />
+    <Folder Include="assets\fonts-master\ofl\angkor\" />
+    <Folder Include="assets\fonts-master\ofl\annieuseyourtelescope\" />
+    <Folder Include="assets\fonts-master\ofl\anonymouspro\" />
+    <Folder Include="assets\fonts-master\ofl\anticdidone\" />
+    <Folder Include="assets\fonts-master\ofl\anticslab\" />
+    <Folder Include="assets\fonts-master\ofl\antic\" />
+    <Folder Include="assets\fonts-master\ofl\antonio\" />
+    <Folder Include="assets\fonts-master\ofl\anton\" />
+    <Folder Include="assets\fonts-master\ofl\arapey\" />
+    <Folder Include="assets\fonts-master\ofl\arbutusslab\" />
+    <Folder Include="assets\fonts-master\ofl\arbutus\" />
+    <Folder Include="assets\fonts-master\ofl\architectsdaughter\" />
+    <Folder Include="assets\fonts-master\ofl\archivoblack\" />
+    <Folder Include="assets\fonts-master\ofl\archivonarrow\" />
+    <Folder Include="assets\fonts-master\ofl\arizonia\" />
+    <Folder Include="assets\fonts-master\ofl\armata\" />
+    <Folder Include="assets\fonts-master\ofl\artifika\" />
+    <Folder Include="assets\fonts-master\ofl\arvo\" />
+    <Folder Include="assets\fonts-master\ofl\arya\" />
+    <Folder Include="assets\fonts-master\ofl\asap\" />
+    <Folder Include="assets\fonts-master\ofl\asar\" />
+    <Folder Include="assets\fonts-master\ofl\asset\" />
+    <Folder Include="assets\fonts-master\ofl\astloch\" />
+    <Folder Include="assets\fonts-master\ofl\asul\" />
+    <Folder Include="assets\fonts-master\ofl\atomicage\" />
+    <Folder Include="assets\fonts-master\ofl\aubrey\" />
+    <Folder Include="assets\fonts-master\ofl\audiowide\" />
+    <Folder Include="assets\fonts-master\ofl\autourone\" />
+    <Folder Include="assets\fonts-master\ofl\averagesans\" />
+    <Folder Include="assets\fonts-master\ofl\average\" />
+    <Folder Include="assets\fonts-master\ofl\averiagruesalibre\" />
+    <Folder Include="assets\fonts-master\ofl\averialibre\" />
+    <Folder Include="assets\fonts-master\ofl\averiasanslibre\" />
+    <Folder Include="assets\fonts-master\ofl\averiaseriflibre\" />
+    <Folder Include="assets\fonts-master\ofl\badscript\" />
+    <Folder Include="assets\fonts-master\ofl\baloobhaina\" />
+    <Folder Include="assets\fonts-master\ofl\baloobhai\" />
+    <Folder Include="assets\fonts-master\ofl\baloochettan\" />
+    <Folder Include="assets\fonts-master\ofl\balooda\" />
+    <Folder Include="assets\fonts-master\ofl\baloopaaji\" />
+    <Folder Include="assets\fonts-master\ofl\balootamma\" />
+    <Folder Include="assets\fonts-master\ofl\balootammudu\" />
+    <Folder Include="assets\fonts-master\ofl\baloothambi\" />
+    <Folder Include="assets\fonts-master\ofl\baloo\" />
+    <Folder Include="assets\fonts-master\ofl\balthazar\" />
+    <Folder Include="assets\fonts-master\ofl\bangers\" />
+    <Folder Include="assets\fonts-master\ofl\basic\" />
+    <Folder Include="assets\fonts-master\ofl\battambang\" />
+    <Folder Include="assets\fonts-master\ofl\baumans\" />
+    <Folder Include="assets\fonts-master\ofl\bayon\" />
+    <Folder Include="assets\fonts-master\ofl\belgrano\" />
+    <Folder Include="assets\fonts-master\ofl\belleza\" />
+    <Folder Include="assets\fonts-master\ofl\benchnine\" />
+    <Folder Include="assets\fonts-master\ofl\bentham\" />
+    <Folder Include="assets\fonts-master\ofl\berkshireswash\" />
+    <Folder Include="assets\fonts-master\ofl\bevan\" />
+    <Folder Include="assets\fonts-master\ofl\bhavuka\" />
+    <Folder Include="assets\fonts-master\ofl\bigelowrules\" />
+    <Folder Include="assets\fonts-master\ofl\bigshotone\" />
+    <Folder Include="assets\fonts-master\ofl\bilboswashcaps\" />
+    <Folder Include="assets\fonts-master\ofl\bilbo\" />
+    <Folder Include="assets\fonts-master\ofl\biryani\" />
+    <Folder Include="assets\fonts-master\ofl\bitter\" />
+    <Folder Include="assets\fonts-master\ofl\blackopsone\" />
+    <Folder Include="assets\fonts-master\ofl\bokor\" />
+    <Folder Include="assets\fonts-master\ofl\bonbon\" />
+    <Folder Include="assets\fonts-master\ofl\boogaloo\" />
+    <Folder Include="assets\fonts-master\ofl\bowlbyonesc\" />
+    <Folder Include="assets\fonts-master\ofl\bowlbyone\" />
+    <Folder Include="assets\fonts-master\ofl\brawler\" />
+    <Folder Include="assets\fonts-master\ofl\breeserif\" />
+    <Folder Include="assets\fonts-master\ofl\brunoacesc\" />
+    <Folder Include="assets\fonts-master\ofl\brunoace\" />
+    <Folder Include="assets\fonts-master\ofl\bubblegumsans\" />
+    <Folder Include="assets\fonts-master\ofl\bubblerone\" />
+    <Folder Include="assets\fonts-master\ofl\buda\" />
+    <Folder Include="assets\fonts-master\ofl\buenard\" />
+    <Folder Include="assets\fonts-master\ofl\butchermancaps\" />
+    <Folder Include="assets\fonts-master\ofl\butcherman\" />
+    <Folder Include="assets\fonts-master\ofl\butterflykids\" />
+    <Folder Include="assets\fonts-master\ofl\cabincondensed\" />
+    <Folder Include="assets\fonts-master\ofl\cabinsketch\" />
+    <Folder Include="assets\fonts-master\ofl\cabin\" />
+    <Folder Include="assets\fonts-master\ofl\caesardressing\" />
+    <Folder Include="assets\fonts-master\ofl\cagliostro\" />
+    <Folder Include="assets\fonts-master\ofl\cambay\" />
+    <Folder Include="assets\fonts-master\ofl\cambo\" />
+    <Folder Include="assets\fonts-master\ofl\candal\" />
+    <Folder Include="assets\fonts-master\ofl\cantarell\" />
+    <Folder Include="assets\fonts-master\ofl\cantataone\" />
+    <Folder Include="assets\fonts-master\ofl\cantoraone\" />
+    <Folder Include="assets\fonts-master\ofl\capriola\" />
+    <Folder Include="assets\fonts-master\ofl\cardo\" />
+    <Folder Include="assets\fonts-master\ofl\carme\" />
+    <Folder Include="assets\fonts-master\ofl\carroisgothicsc\" />
+    <Folder Include="assets\fonts-master\ofl\carroisgothic\" />
+    <Folder Include="assets\fonts-master\ofl\carterone\" />
+    <Folder Include="assets\fonts-master\ofl\catamaran\" />
+    <Folder Include="assets\fonts-master\ofl\caudex\" />
+    <Folder Include="assets\fonts-master\ofl\caveatbrush\" />
+    <Folder Include="assets\fonts-master\ofl\caveat\" />
+    <Folder Include="assets\fonts-master\ofl\cedarvillecursive\" />
+    <Folder Include="assets\fonts-master\ofl\cevicheone\" />
+    <Folder Include="assets\fonts-master\ofl\changaone\" />
+    <Folder Include="assets\fonts-master\ofl\changa\" />
+    <Folder Include="assets\fonts-master\ofl\chango\" />
+    <Folder Include="assets\fonts-master\ofl\chauphilomeneone\" />
+    <Folder Include="assets\fonts-master\ofl\chelaone\" />
+    <Folder Include="assets\fonts-master\ofl\chelseamarket\" />
+    <Folder Include="assets\fonts-master\ofl\chenla\" />
+    <Folder Include="assets\fonts-master\ofl\cherryswash\" />
+    <Folder Include="assets\fonts-master\ofl\chicle\" />
+    <Folder Include="assets\fonts-master\ofl\chivo\" />
+    <Folder Include="assets\fonts-master\ofl\chonburi\" />
+    <Folder Include="assets\fonts-master\ofl\cinzeldecorative\" />
+    <Folder Include="assets\fonts-master\ofl\cinzel\" />
+    <Folder Include="assets\fonts-master\ofl\clara\" />
+    <Folder Include="assets\fonts-master\ofl\clickerscript\" />
+    <Folder Include="assets\fonts-master\ofl\codacaption\" />
+    <Folder Include="assets\fonts-master\ofl\coda\" />
+    <Folder Include="assets\fonts-master\ofl\codystar\" />
+    <Folder Include="assets\fonts-master\ofl\combo\" />
+    <Folder Include="assets\fonts-master\ofl\comfortaa\" />
+    <Folder Include="assets\fonts-master\ofl\concertone\" />
+    <Folder Include="assets\fonts-master\ofl\condiment\" />
+    <Folder Include="assets\fonts-master\ofl\content\" />
+    <Folder Include="assets\fonts-master\ofl\contrailone\" />
+    <Folder Include="assets\fonts-master\ofl\convergence\" />
+    <Folder Include="assets\fonts-master\ofl\cookie\" />
+    <Folder Include="assets\fonts-master\ofl\copse\" />
+    <Folder Include="assets\fonts-master\ofl\corben\" />
+    <Folder Include="assets\fonts-master\ofl\courgette\" />
+    <Folder Include="assets\fonts-master\ofl\coustard\" />
+    <Folder Include="assets\fonts-master\ofl\coveredbyyourgrace\" />
+    <Folder Include="assets\fonts-master\ofl\creepster\" />
+    <Folder Include="assets\fonts-master\ofl\creteround\" />
+    <Folder Include="assets\fonts-master\ofl\crimsontext\" />
+    <Folder Include="assets\fonts-master\ofl\croissantone\" />
+    <Folder Include="assets\fonts-master\ofl\cuprum\" />
+    <Folder Include="assets\fonts-master\ofl\cutivemono\" />
+    <Folder Include="assets\fonts-master\ofl\cutive\" />
+    <Folder Include="assets\fonts-master\ofl\cwtexfangsong\" />
+    <Folder Include="assets\fonts-master\ofl\cwtexhei\" />
+    <Folder Include="assets\fonts-master\ofl\cwtexkai\" />
+    <Folder Include="assets\fonts-master\ofl\cwtexming\" />
+    <Folder Include="assets\fonts-master\ofl\cwtexyen\" />
+    <Folder Include="assets\fonts-master\ofl\damion\" />
+    <Folder Include="assets\fonts-master\ofl\dancingscript\" />
+    <Folder Include="assets\fonts-master\ofl\dangrek\" />
+    <Folder Include="assets\fonts-master\ofl\dawningofanewday\" />
+    <Folder Include="assets\fonts-master\ofl\daysone\" />
+    <Folder Include="assets\fonts-master\ofl\dekko\" />
+    <Folder Include="assets\fonts-master\ofl\deliusswashcaps\" />
+    <Folder Include="assets\fonts-master\ofl\deliusunicase\" />
+    <Folder Include="assets\fonts-master\ofl\delius\" />
+    <Folder Include="assets\fonts-master\ofl\dellarespira\" />
+    <Folder Include="assets\fonts-master\ofl\denkone\" />
+    <Folder Include="assets\fonts-master\ofl\devonshire\" />
+    <Folder Include="assets\fonts-master\ofl\dhurjati\" />
+    <Folder Include="assets\fonts-master\ofl\dhyana\" />
+    <Folder Include="assets\fonts-master\ofl\didactgothic\" />
+    <Folder Include="assets\fonts-master\ofl\digitalnumbers\" />
+    <Folder Include="assets\fonts-master\ofl\dinah\" />
+    <Folder Include="assets\fonts-master\ofl\diplomatasc\" />
+    <Folder Include="assets\fonts-master\ofl\diplomata\" />
+    <Folder Include="assets\fonts-master\ofl\domine\" />
+    <Folder Include="assets\fonts-master\ofl\donegalone\" />
+    <Folder Include="assets\fonts-master\ofl\doppioone\" />
+    <Folder Include="assets\fonts-master\ofl\dorsa\" />
+    <Folder Include="assets\fonts-master\ofl\dosis\" />
+    <Folder Include="assets\fonts-master\ofl\drsugiyama\" />
+    <Folder Include="assets\fonts-master\ofl\durusans\" />
+    <Folder Include="assets\fonts-master\ofl\dynalight\" />
+    <Folder Include="assets\fonts-master\ofl\eaglelake\" />
+    <Folder Include="assets\fonts-master\ofl\eatercaps\" />
+    <Folder Include="assets\fonts-master\ofl\eater\" />
+    <Folder Include="assets\fonts-master\ofl\ebgaramond\" />
+    <Folder Include="assets\fonts-master\ofl\economica\" />
+    <Folder Include="assets\fonts-master\ofl\eczar\" />
+    <Folder Include="assets\fonts-master\ofl\ekmukta\" />
+    <Folder Include="assets\fonts-master\ofl\electrolize\" />
+    <Folder Include="assets\fonts-master\ofl\elsieswashcaps\" />
+    <Folder Include="assets\fonts-master\ofl\elsie\" />
+    <Folder Include="assets\fonts-master\ofl\emblemaone\" />
+    <Folder Include="assets\fonts-master\ofl\emilyscandy\" />
+    <Folder Include="assets\fonts-master\ofl\encodesanscompressed\" />
+    <Folder Include="assets\fonts-master\ofl\encodesanscondensed\" />
+    <Folder Include="assets\fonts-master\ofl\encodesansnarrow\" />
+    <Folder Include="assets\fonts-master\ofl\encodesanswide\" />
+    <Folder Include="assets\fonts-master\ofl\encodesans\" />
+    <Folder Include="assets\fonts-master\ofl\engagement\" />
+    <Folder Include="assets\fonts-master\ofl\englebert\" />
+    <Folder Include="assets\fonts-master\ofl\enriqueta\" />
+    <Folder Include="assets\fonts-master\ofl\ericaone\" />
+    <Folder Include="assets\fonts-master\ofl\esteban\" />
+    <Folder Include="assets\fonts-master\ofl\euphoriascript\" />
+    <Folder Include="assets\fonts-master\ofl\ewert\" />
+    <Folder Include="assets\fonts-master\ofl\exo2\" />
+    <Folder Include="assets\fonts-master\ofl\exo\" />
+    <Folder Include="assets\fonts-master\ofl\expletussans\" />
+    <Folder Include="assets\fonts-master\ofl\fanwoodtext\" />
+    <Folder Include="assets\fonts-master\ofl\fascinateinline\" />
+    <Folder Include="assets\fonts-master\ofl\fascinate\" />
+    <Folder Include="assets\fonts-master\ofl\fasterone\" />
+    <Folder Include="assets\fonts-master\ofl\fasthand\" />
+    <Folder Include="assets\fonts-master\ofl\faunaone\" />
+    <Folder Include="assets\fonts-master\ofl\federant\" />
+    <Folder Include="assets\fonts-master\ofl\federo\" />
+    <Folder Include="assets\fonts-master\ofl\felipa\" />
+    <Folder Include="assets\fonts-master\ofl\fenix\" />
+    <Folder Include="assets\fonts-master\ofl\fingerpaint\" />
+    <Folder Include="assets\fonts-master\ofl\firamono\" />
+    <Folder Include="assets\fonts-master\ofl\firasans\" />
+    <Folder Include="assets\fonts-master\ofl\fjallaone\" />
+    <Folder Include="assets\fonts-master\ofl\fjordone\" />
+    <Folder Include="assets\fonts-master\ofl\flamenco\" />
+    <Folder Include="assets\fonts-master\ofl\flavors\" />
+    <Folder Include="assets\fonts-master\ofl\fondamento\" />
+    <Folder Include="assets\fonts-master\ofl\forum\" />
+    <Folder Include="assets\fonts-master\ofl\francoisone\" />
+    <Folder Include="assets\fonts-master\ofl\freckleface\" />
+    <Folder Include="assets\fonts-master\ofl\frederickathegreat\" />
+    <Folder Include="assets\fonts-master\ofl\fredokaone\" />
+    <Folder Include="assets\fonts-master\ofl\freehand\" />
+    <Folder Include="assets\fonts-master\ofl\fresca\" />
+    <Folder Include="assets\fonts-master\ofl\frijole\" />
+    <Folder Include="assets\fonts-master\ofl\fruktur\" />
+    <Folder Include="assets\fonts-master\ofl\fugazone\" />
+    <Folder Include="assets\fonts-master\ofl\gabriela\" />
+    <Folder Include="assets\fonts-master\ofl\gafata\" />
+    <Folder Include="assets\fonts-master\ofl\galdeano\" />
+    <Folder Include="assets\fonts-master\ofl\galindo\" />
+    <Folder Include="assets\fonts-master\ofl\gentiumbasic\" />
+    <Folder Include="assets\fonts-master\ofl\gentiumbookbasic\" />
+    <Folder Include="assets\fonts-master\ofl\geostarfill\" />
+    <Folder Include="assets\fonts-master\ofl\geostar\" />
+    <Folder Include="assets\fonts-master\ofl\geo\" />
+    <Folder Include="assets\fonts-master\ofl\germaniaone\" />
+    <Folder Include="assets\fonts-master\ofl\gfsdidot\" />
+    <Folder Include="assets\fonts-master\ofl\gfsneohellenic\" />
+    <Folder Include="assets\fonts-master\ofl\gidugu\" />
+    <Folder Include="assets\fonts-master\ofl\gildadisplay\" />
+    <Folder Include="assets\fonts-master\ofl\giveyouglory\" />
+    <Folder Include="assets\fonts-master\ofl\glassantiqua\" />
+    <Folder Include="assets\fonts-master\ofl\glegoo\" />
+    <Folder Include="assets\fonts-master\ofl\gloriahallelujah\" />
+    <Folder Include="assets\fonts-master\ofl\goblinone\" />
+    <Folder Include="assets\fonts-master\ofl\gochihand\" />
+    <Folder Include="assets\fonts-master\ofl\gorditas\" />
+    <Folder Include="assets\fonts-master\ofl\goudybookletter1911\" />
+    <Folder Include="assets\fonts-master\ofl\graduate\" />
+    <Folder Include="assets\fonts-master\ofl\grandhotel\" />
+    <Folder Include="assets\fonts-master\ofl\gravitasone\" />
+    <Folder Include="assets\fonts-master\ofl\greatvibes\" />
+    <Folder Include="assets\fonts-master\ofl\griffy\" />
+    <Folder Include="assets\fonts-master\ofl\gruppo\" />
+    <Folder Include="assets\fonts-master\ofl\gudea\" />
+    <Folder Include="assets\fonts-master\ofl\gurajada\" />
+    <Folder Include="assets\fonts-master\ofl\habibi\" />
+    <Folder Include="assets\fonts-master\ofl\halant\" />
+    <Folder Include="assets\fonts-master\ofl\hammersmithone\" />
+    <Folder Include="assets\fonts-master\ofl\hanaleifill\" />
+    <Folder Include="assets\fonts-master\ofl\hanalei\" />
+    <Folder Include="assets\fonts-master\ofl\handlee\" />
+    <Folder Include="assets\fonts-master\ofl\hanna\" />
+    <Folder Include="assets\fonts-master\ofl\hanuman\" />
+    <Folder Include="assets\fonts-master\ofl\happymonkey\" />
+    <Folder Include="assets\fonts-master\ofl\headlandone\" />
+    <Folder Include="assets\fonts-master\ofl\hennypenny\" />
+    <Folder Include="assets\fonts-master\ofl\hermeneusone\" />
+    <Folder Include="assets\fonts-master\ofl\herrvonmuellerhoff\" />
+    <Folder Include="assets\fonts-master\ofl\hindcolombo\" />
+    <Folder Include="assets\fonts-master\ofl\hindguntur\" />
+    <Folder Include="assets\fonts-master\ofl\hindjalandhar\" />
+    <Folder Include="assets\fonts-master\ofl\hindkochi\" />
+    <Folder Include="assets\fonts-master\ofl\hindmadurai\" />
+    <Folder Include="assets\fonts-master\ofl\hindmysuru\" />
+    <Folder Include="assets\fonts-master\ofl\hindsiliguri\" />
+    <Folder Include="assets\fonts-master\ofl\hindvadodara\" />
+    <Folder Include="assets\fonts-master\ofl\hind\" />
+    <Folder Include="assets\fonts-master\ofl\holtwoodonesc\" />
+    <Folder Include="assets\fonts-master\ofl\homenaje\" />
+    <Folder Include="assets\fonts-master\ofl\iceberg\" />
+    <Folder Include="assets\fonts-master\ofl\iceland\" />
+    <Folder Include="assets\fonts-master\ofl\imfelldoublepicasc\" />
+    <Folder Include="assets\fonts-master\ofl\imfelldoublepica\" />
+    <Folder Include="assets\fonts-master\ofl\imfelldwpicasc\" />
+    <Folder Include="assets\fonts-master\ofl\imfelldwpica\" />
+    <Folder Include="assets\fonts-master\ofl\imfellenglishsc\" />
+    <Folder Include="assets\fonts-master\ofl\imfellenglish\" />
+    <Folder Include="assets\fonts-master\ofl\imfellfrenchcanonsc\" />
+    <Folder Include="assets\fonts-master\ofl\imfellfrenchcanon\" />
+    <Folder Include="assets\fonts-master\ofl\imfellgreatprimersc\" />
+    <Folder Include="assets\fonts-master\ofl\imfellgreatprimer\" />
+    <Folder Include="assets\fonts-master\ofl\imprima\" />
+    <Folder Include="assets\fonts-master\ofl\inconsolata\" />
+    <Folder Include="assets\fonts-master\ofl\inder\" />
+    <Folder Include="assets\fonts-master\ofl\indieflower\" />
+    <Folder Include="assets\fonts-master\ofl\inika\" />
+    <Folder Include="assets\fonts-master\ofl\inknutantiqua\" />
+    <Folder Include="assets\fonts-master\ofl\istokweb\" />
+    <Folder Include="assets\fonts-master\ofl\italiana\" />
+    <Folder Include="assets\fonts-master\ofl\italianno\" />
+    <Folder Include="assets\fonts-master\ofl\itim\" />
+    <Folder Include="assets\fonts-master\ofl\jacquesfrancoisshadow\" />
+    <Folder Include="assets\fonts-master\ofl\jacquesfrancois\" />
+    <Folder Include="assets\fonts-master\ofl\jaldi\" />
+    <Folder Include="assets\fonts-master\ofl\jejugothic\" />
+    <Folder Include="assets\fonts-master\ofl\jejuhallasan\" />
+    <Folder Include="assets\fonts-master\ofl\jejumyeongjo\" />
+    <Folder Include="assets\fonts-master\ofl\jimnightshade\" />
+    <Folder Include="assets\fonts-master\ofl\jockeyone\" />
+    <Folder Include="assets\fonts-master\ofl\jollylodger\" />
+    <Folder Include="assets\fonts-master\ofl\jomolhari\" />
+    <Folder Include="assets\fonts-master\ofl\josefinsansstdlight\" />
+    <Folder Include="assets\fonts-master\ofl\josefinsans\" />
+    <Folder Include="assets\fonts-master\ofl\josefinslab\" />
+    <Folder Include="assets\fonts-master\ofl\jotione\" />
+    <Folder Include="assets\fonts-master\ofl\judson\" />
+    <Folder Include="assets\fonts-master\ofl\julee\" />
+    <Folder Include="assets\fonts-master\ofl\juliussansone\" />
+    <Folder Include="assets\fonts-master\ofl\junge\" />
+    <Folder Include="assets\fonts-master\ofl\jura\" />
+    <Folder Include="assets\fonts-master\ofl\justmeagaindownhere\" />
+    <Folder Include="assets\fonts-master\ofl\kadwa\" />
+    <Folder Include="assets\fonts-master\ofl\kalam\" />
+    <Folder Include="assets\fonts-master\ofl\kameron\" />
+    <Folder Include="assets\fonts-master\ofl\kanit\" />
+    <Folder Include="assets\fonts-master\ofl\kantumruy\" />
+    <Folder Include="assets\fonts-master\ofl\karlatamilinclined\" />
+    <Folder Include="assets\fonts-master\ofl\karlatamilupright\" />
+    <Folder Include="assets\fonts-master\ofl\karla\" />
+    <Folder Include="assets\fonts-master\ofl\karma\" />
+    <Folder Include="assets\fonts-master\ofl\kaushanscript\" />
+    <Folder Include="assets\fonts-master\ofl\kavoon\" />
+    <Folder Include="assets\fonts-master\ofl\kdamthmor\" />
+    <Folder Include="assets\fonts-master\ofl\keaniaone\" />
+    <Folder Include="assets\fonts-master\ofl\kellyslab\" />
+    <Folder Include="assets\fonts-master\ofl\kenia\" />
+    <Folder Include="assets\fonts-master\ofl\khand\" />
+    <Folder Include="assets\fonts-master\ofl\khmer\" />
+    <Folder Include="assets\fonts-master\ofl\khula\" />
+    <Folder Include="assets\fonts-master\ofl\kiteone\" />
+    <Folder Include="assets\fonts-master\ofl\knewave\" />
+    <Folder Include="assets\fonts-master\ofl\kopubbatang\" />
+    <Folder Include="assets\fonts-master\ofl\kottaone\" />
+    <Folder Include="assets\fonts-master\ofl\koulen\" />
+    <Folder Include="assets\fonts-master\ofl\kreon\" />
+    <Folder Include="assets\fonts-master\ofl\kristi\" />
+    <Folder Include="assets\fonts-master\ofl\kronaone\" />
+    <Folder Include="assets\fonts-master\ofl\kurale\" />
+    <Folder Include="assets\fonts-master\ofl\labelleaurore\" />
+    <Folder Include="assets\fonts-master\ofl\laila\" />
+    <Folder Include="assets\fonts-master\ofl\lakkireddy\" />
+    <Folder Include="assets\fonts-master\ofl\lancelot\" />
+    <Folder Include="assets\fonts-master\ofl\laomuangdon\" />
+    <Folder Include="assets\fonts-master\ofl\laomuangkhong\" />
+    <Folder Include="assets\fonts-master\ofl\laosanspro\" />
+    <Folder Include="assets\fonts-master\ofl\lateef\" />
+    <Folder Include="assets\fonts-master\ofl\lato\" />
+    <Folder Include="assets\fonts-master\ofl\leaguescript\" />
+    <Folder Include="assets\fonts-master\ofl\leckerlione\" />
+    <Folder Include="assets\fonts-master\ofl\ledger\" />
+    <Folder Include="assets\fonts-master\ofl\lekton\" />
+    <Folder Include="assets\fonts-master\ofl\lemon\" />
+    <Folder Include="assets\fonts-master\ofl\librebaskerville\" />
+    <Folder Include="assets\fonts-master\ofl\librecaslontext\" />
+    <Folder Include="assets\fonts-master\ofl\lifesavers\" />
+    <Folder Include="assets\fonts-master\ofl\lilitaone\" />
+    <Folder Include="assets\fonts-master\ofl\lilyscriptone\" />
+    <Folder Include="assets\fonts-master\ofl\limelight\" />
+    <Folder Include="assets\fonts-master\ofl\lindenhill\" />
+    <Folder Include="assets\fonts-master\ofl\lobstertwo\" />
+    <Folder Include="assets\fonts-master\ofl\lobster\" />
+    <Folder Include="assets\fonts-master\ofl\lohitbengali\" />
+    <Folder Include="assets\fonts-master\ofl\lohitdevanagari\" />
+    <Folder Include="assets\fonts-master\ofl\lohittamil\" />
+    <Folder Include="assets\fonts-master\ofl\londrinaoutline\" />
+    <Folder Include="assets\fonts-master\ofl\londrinashadow\" />
+    <Folder Include="assets\fonts-master\ofl\londrinasketch\" />
+    <Folder Include="assets\fonts-master\ofl\londrinasolid\" />
+    <Folder Include="assets\fonts-master\ofl\lora\" />
+    <Folder Include="assets\fonts-master\ofl\lovedbytheking\" />
+    <Folder Include="assets\fonts-master\ofl\loversquarrel\" />
+    <Folder Include="assets\fonts-master\ofl\loveyalikeasister\" />
+    <Folder Include="assets\fonts-master\ofl\lusitana\" />
+    <Folder Include="assets\fonts-master\ofl\lustria\" />
+    <Folder Include="assets\fonts-master\ofl\macondoswashcaps\" />
+    <Folder Include="assets\fonts-master\ofl\macondo\" />
+    <Folder Include="assets\fonts-master\ofl\magra\" />
+    <Folder Include="assets\fonts-master\ofl\mako\" />
+    <Folder Include="assets\fonts-master\ofl\mallanna\" />
+    <Folder Include="assets\fonts-master\ofl\mandali\" />
+    <Folder Include="assets\fonts-master\ofl\marcellussc\" />
+    <Folder Include="assets\fonts-master\ofl\marcellus\" />
+    <Folder Include="assets\fonts-master\ofl\marckscript\" />
+    <Folder Include="assets\fonts-master\ofl\margarine\" />
+    <Folder Include="assets\fonts-master\ofl\markoone\" />
+    <Folder Include="assets\fonts-master\ofl\marmelad\" />
+    <Folder Include="assets\fonts-master\ofl\martelsans\" />
+    <Folder Include="assets\fonts-master\ofl\martel\" />
+    <Folder Include="assets\fonts-master\ofl\marvel\" />
+    <Folder Include="assets\fonts-master\ofl\matesc\" />
+    <Folder Include="assets\fonts-master\ofl\mate\" />
+    <Folder Include="assets\fonts-master\ofl\mavenpro\" />
+    <Folder Include="assets\fonts-master\ofl\mclaren\" />
+    <Folder Include="assets\fonts-master\ofl\meddon\" />
+    <Folder Include="assets\fonts-master\ofl\medievalsharp\" />
+    <Folder Include="assets\fonts-master\ofl\medulaone\" />
+    <Folder Include="assets\fonts-master\ofl\megrim\" />
+    <Folder Include="assets\fonts-master\ofl\meiescript\" />
+    <Folder Include="assets\fonts-master\ofl\mergeone\" />
+    <Folder Include="assets\fonts-master\ofl\meriendaone\" />
+    <Folder Include="assets\fonts-master\ofl\merienda\" />
+    <Folder Include="assets\fonts-master\ofl\merriweathersans\" />
+    <Folder Include="assets\fonts-master\ofl\merriweather\" />
+    <Folder Include="assets\fonts-master\ofl\mervalescript\" />
+    <Folder Include="assets\fonts-master\ofl\metalmania\" />
+    <Folder Include="assets\fonts-master\ofl\metal\" />
+    <Folder Include="assets\fonts-master\ofl\metamorphous\" />
+    <Folder Include="assets\fonts-master\ofl\metrophobic\" />
+    <Folder Include="assets\fonts-master\ofl\miama\" />
+    <Folder Include="assets\fonts-master\ofl\michroma\" />
+    <Folder Include="assets\fonts-master\ofl\milonga\" />
+    <Folder Include="assets\fonts-master\ofl\miltoniantattoo\" />
+    <Folder Include="assets\fonts-master\ofl\miltonian\" />
+    <Folder Include="assets\fonts-master\ofl\miniver\" />
+    <Folder Include="assets\fonts-master\ofl\missfajardose\" />
+    <Folder Include="assets\fonts-master\ofl\misssaintdelafield\" />
+    <Folder Include="assets\fonts-master\ofl\modak\" />
+    <Folder Include="assets\fonts-master\ofl\modernantiqua\" />
+    <Folder Include="assets\fonts-master\ofl\molengo\" />
+    <Folder Include="assets\fonts-master\ofl\molle\" />
+    <Folder Include="assets\fonts-master\ofl\monda\" />
+    <Folder Include="assets\fonts-master\ofl\monofett\" />
+    <Folder Include="assets\fonts-master\ofl\monoton\" />
+    <Folder Include="assets\fonts-master\ofl\monsieurladoulaise\" />
+    <Folder Include="assets\fonts-master\ofl\montaga\" />
+    <Folder Include="assets\fonts-master\ofl\montserratalternates\" />
+    <Folder Include="assets\fonts-master\ofl\montserratsubrayada\" />
+    <Folder Include="assets\fonts-master\ofl\montserrat\" />
+    <Folder Include="assets\fonts-master\ofl\moulpali\" />
+    <Folder Include="assets\fonts-master\ofl\moul\" />
+    <Folder Include="assets\fonts-master\ofl\mousememoirs\" />
+    <Folder Include="assets\fonts-master\ofl\mrbedford\" />
+    <Folder Include="assets\fonts-master\ofl\mrbedfort\" />
+    <Folder Include="assets\fonts-master\ofl\mrdafoe\" />
+    <Folder Include="assets\fonts-master\ofl\mrdehaviland\" />
+    <Folder Include="assets\fonts-master\ofl\mrssaintdelafield\" />
+    <Folder Include="assets\fonts-master\ofl\mrssheppards\" />
+    <Folder Include="assets\fonts-master\ofl\muli\" />
+    <Folder Include="assets\fonts-master\ofl\myanmarsanspro\" />
+    <Folder Include="assets\fonts-master\ofl\mysteryquest\" />
+    <Folder Include="assets\fonts-master\ofl\nanumbrushscript\" />
+    <Folder Include="assets\fonts-master\ofl\nanumgothiccoding\" />
+    <Folder Include="assets\fonts-master\ofl\nanumgothic\" />
+    <Folder Include="assets\fonts-master\ofl\nanummyeongjo\" />
+    <Folder Include="assets\fonts-master\ofl\nanumpenscript\" />
+    <Folder Include="assets\fonts-master\ofl\nats\" />
+    <Folder Include="assets\fonts-master\ofl\neucha\" />
+    <Folder Include="assets\fonts-master\ofl\neuton\" />
+    <Folder Include="assets\fonts-master\ofl\newrocker\" />
+    <Folder Include="assets\fonts-master\ofl\newscycle\" />
+    <Folder Include="assets\fonts-master\ofl\niconne\" />
+    <Folder Include="assets\fonts-master\ofl\nixieone\" />
+    <Folder Include="assets\fonts-master\ofl\nobile\" />
+    <Folder Include="assets\fonts-master\ofl\norican\" />
+    <Folder Include="assets\fonts-master\ofl\nosifercaps\" />
+    <Folder Include="assets\fonts-master\ofl\nosifer\" />
+    <Folder Include="assets\fonts-master\ofl\nothingyoucoulddo\" />
+    <Folder Include="assets\fonts-master\ofl\noticiatext\" />
+    <Folder Include="assets\fonts-master\ofl\notosans\" />
+    <Folder Include="assets\fonts-master\ofl\notoserif\" />
+    <Folder Include="assets\fonts-master\ofl\novacut\" />
+    <Folder Include="assets\fonts-master\ofl\novaflat\" />
+    <Folder Include="assets\fonts-master\ofl\novamono\" />
+    <Folder Include="assets\fonts-master\ofl\novaoval\" />
+    <Folder Include="assets\fonts-master\ofl\novaround\" />
+    <Folder Include="assets\fonts-master\ofl\novascript\" />
+    <Folder Include="assets\fonts-master\ofl\novaslim\" />
+    <Folder Include="assets\fonts-master\ofl\novasquare\" />
+    <Folder Include="assets\fonts-master\ofl\ntr\" />
+    <Folder Include="assets\fonts-master\ofl\numans\" />
+    <Folder Include="assets\fonts-master\ofl\nunito\" />
+    <Folder Include="assets\fonts-master\ofl\odormeanchey\" />
+    <Folder Include="assets\fonts-master\ofl\offside\" />
+    <Folder Include="assets\fonts-master\ofl\oflsortsmillgoudytt\" />
+    <Folder Include="assets\fonts-master\ofl\oldenburg\" />
+    <Folder Include="assets\fonts-master\ofl\oldstandardtt\" />
+    <Folder Include="assets\fonts-master\ofl\oleoscriptswashcaps\" />
+    <Folder Include="assets\fonts-master\ofl\oleoscript\" />
+    <Folder Include="assets\fonts-master\ofl\oranienbaum\" />
+    <Folder Include="assets\fonts-master\ofl\orbitron\" />
+    <Folder Include="assets\fonts-master\ofl\oregano\" />
+    <Folder Include="assets\fonts-master\ofl\orienta\" />
+    <Folder Include="assets\fonts-master\ofl\originalsurfer\" />
+    <Folder Include="assets\fonts-master\ofl\oswald\" />
+    <Folder Include="assets\fonts-master\ofl\overlocksc\" />
+    <Folder Include="assets\fonts-master\ofl\overlock\" />
+    <Folder Include="assets\fonts-master\ofl\overtherainbow\" />
+    <Folder Include="assets\fonts-master\ofl\ovo\" />
+    <Folder Include="assets\fonts-master\ofl\oxygenmono\" />
+    <Folder Include="assets\fonts-master\ofl\oxygen\" />
+    <Folder Include="assets\fonts-master\ofl\pacifico\" />
+    <Folder Include="assets\fonts-master\ofl\padauk\" />
+    <Folder Include="assets\fonts-master\ofl\palanquindark\" />
+    <Folder Include="assets\fonts-master\ofl\palanquin\" />
+    <Folder Include="assets\fonts-master\ofl\paprika\" />
+    <Folder Include="assets\fonts-master\ofl\parisienne\" />
+    <Folder Include="assets\fonts-master\ofl\passeroone\" />
+    <Folder Include="assets\fonts-master\ofl\passionone\" />
+    <Folder Include="assets\fonts-master\ofl\pathwaygothicone\" />
+    <Folder Include="assets\fonts-master\ofl\patrickhandsc\" />
+    <Folder Include="assets\fonts-master\ofl\patrickhand\" />
+    <Folder Include="assets\fonts-master\ofl\patuaone\" />
+    <Folder Include="assets\fonts-master\ofl\paytoneone\" />
+    <Folder Include="assets\fonts-master\ofl\pecita\" />
+    <Folder Include="assets\fonts-master\ofl\peddana\" />
+    <Folder Include="assets\fonts-master\ofl\peralta\" />
+    <Folder Include="assets\fonts-master\ofl\petitformalscript\" />
+    <Folder Include="assets\fonts-master\ofl\petrona\" />
+    <Folder Include="assets\fonts-master\ofl\phetsarath\" />
+    <Folder Include="assets\fonts-master\ofl\philosopher\" />
+    <Folder Include="assets\fonts-master\ofl\piedra\" />
+    <Folder Include="assets\fonts-master\ofl\pinyonscript\" />
+    <Folder Include="assets\fonts-master\ofl\pirataone\" />
+    <Folder Include="assets\fonts-master\ofl\plaster\" />
+    <Folder Include="assets\fonts-master\ofl\playball\" />
+    <Folder Include="assets\fonts-master\ofl\playfairdisplaysc\" />
+    <Folder Include="assets\fonts-master\ofl\playfairdisplay\" />
+    <Folder Include="assets\fonts-master\ofl\play\" />
+    <Folder Include="assets\fonts-master\ofl\podkova\" />
+    <Folder Include="assets\fonts-master\ofl\poetsenone\" />
+    <Folder Include="assets\fonts-master\ofl\poiretone\" />
+    <Folder Include="assets\fonts-master\ofl\pollerone\" />
+    <Folder Include="assets\fonts-master\ofl\poly\" />
+    <Folder Include="assets\fonts-master\ofl\pompiere\" />
+    <Folder Include="assets\fonts-master\ofl\ponnala\" />
+    <Folder Include="assets\fonts-master\ofl\pontanosans\" />
+    <Folder Include="assets\fonts-master\ofl\poppins\" />
+    <Folder Include="assets\fonts-master\ofl\portersansblock\" />
+    <Folder Include="assets\fonts-master\ofl\portlligatsans\" />
+    <Folder Include="assets\fonts-master\ofl\portlligatslab\" />
+    <Folder Include="assets\fonts-master\ofl\pragatinarrow\" />
+    <Folder Include="assets\fonts-master\ofl\prata\" />
+    <Folder Include="assets\fonts-master\ofl\preahvihear\" />
+    <Folder Include="assets\fonts-master\ofl\pressstart2p\" />
+    <Folder Include="assets\fonts-master\ofl\princesssofia\" />
+    <Folder Include="assets\fonts-master\ofl\prociono\" />
+    <Folder Include="assets\fonts-master\ofl\prostoone\" />
+    <Folder Include="assets\fonts-master\ofl\ptmono\" />
+    <Folder Include="assets\fonts-master\ofl\ptsanscaption\" />
+    <Folder Include="assets\fonts-master\ofl\ptsansnarrow\" />
+    <Folder Include="assets\fonts-master\ofl\ptsans\" />
+    <Folder Include="assets\fonts-master\ofl\ptserifcaption\" />
+    <Folder Include="assets\fonts-master\ofl\ptserif\" />
+    <Folder Include="assets\fonts-master\ofl\puritan\" />
+    <Folder Include="assets\fonts-master\ofl\purplepurse\" />
+    <Folder Include="assets\fonts-master\ofl\quando\" />
+    <Folder Include="assets\fonts-master\ofl\quantico\" />
+    <Folder Include="assets\fonts-master\ofl\quattrocentosans\" />
+    <Folder Include="assets\fonts-master\ofl\quattrocento\" />
+    <Folder Include="assets\fonts-master\ofl\questrial\" />
+    <Folder Include="assets\fonts-master\ofl\quicksand\" />
+    <Folder Include="assets\fonts-master\ofl\quintessential\" />
+    <Folder Include="assets\fonts-master\ofl\qwigley\" />
+    <Folder Include="assets\fonts-master\ofl\racingsansone\" />
+    <Folder Include="assets\fonts-master\ofl\radley\" />
+    <Folder Include="assets\fonts-master\ofl\rajdhani\" />
+    <Folder Include="assets\fonts-master\ofl\ralewaydots\" />
+    <Folder Include="assets\fonts-master\ofl\raleway\" />
+    <Folder Include="assets\fonts-master\ofl\ramabhadra\" />
+    <Folder Include="assets\fonts-master\ofl\ramaraja\" />
+    <Folder Include="assets\fonts-master\ofl\rambla\" />
+    <Folder Include="assets\fonts-master\ofl\rammettoone\" />
+    <Folder Include="assets\fonts-master\ofl\ranchers\" />
+    <Folder Include="assets\fonts-master\ofl\ranga\" />
+    <Folder Include="assets\fonts-master\ofl\rationale\" />
+    <Folder Include="assets\fonts-master\ofl\raviprakash\" />
+    <Folder Include="assets\fonts-master\ofl\redactedscript\" />
+    <Folder Include="assets\fonts-master\ofl\redacted\" />
+    <Folder Include="assets\fonts-master\ofl\reeniebeanie\" />
+    <Folder Include="assets\fonts-master\ofl\revalia\" />
+    <Folder Include="assets\fonts-master\ofl\rhodiumlibre\" />
+    <Folder Include="assets\fonts-master\ofl\ribeyemarrow\" />
+    <Folder Include="assets\fonts-master\ofl\ribeye\" />
+    <Folder Include="assets\fonts-master\ofl\righteous\" />
+    <Folder Include="assets\fonts-master\ofl\risque\" />
+    <Folder Include="assets\fonts-master\ofl\rokkitt\" />
+    <Folder Include="assets\fonts-master\ofl\romanesco\" />
+    <Folder Include="assets\fonts-master\ofl\ropasans\" />
+    <Folder Include="assets\fonts-master\ofl\rosario\" />
+    <Folder Include="assets\fonts-master\ofl\rosarivo\" />
+    <Folder Include="assets\fonts-master\ofl\rougescript\" />
+    <Folder Include="assets\fonts-master\ofl\rozhaone\" />
+    <Folder Include="assets\fonts-master\ofl\rubikmonoone\" />
+    <Folder Include="assets\fonts-master\ofl\rubikone\" />
+    <Folder Include="assets\fonts-master\ofl\rubik\" />
+    <Folder Include="assets\fonts-master\ofl\ruda\" />
+    <Folder Include="assets\fonts-master\ofl\rufina\" />
+    <Folder Include="assets\fonts-master\ofl\rugeboogie\" />
+    <Folder Include="assets\fonts-master\ofl\ruluko\" />
+    <Folder Include="assets\fonts-master\ofl\rumraisin\" />
+    <Folder Include="assets\fonts-master\ofl\ruslandisplay\" />
+    <Folder Include="assets\fonts-master\ofl\russoone\" />
+    <Folder Include="assets\fonts-master\ofl\ruthie\" />
+    <Folder Include="assets\fonts-master\ofl\rye\" />
+    <Folder Include="assets\fonts-master\ofl\sacramento\" />
+    <Folder Include="assets\fonts-master\ofl\sahitya\" />
+    <Folder Include="assets\fonts-master\ofl\sail\" />
+    <Folder Include="assets\fonts-master\ofl\salsa\" />
+    <Folder Include="assets\fonts-master\ofl\sanchez\" />
+    <Folder Include="assets\fonts-master\ofl\sancreek\" />
+    <Folder Include="assets\fonts-master\ofl\sansation\" />
+    <Folder Include="assets\fonts-master\ofl\sansitaone\" />
+    <Folder Include="assets\fonts-master\ofl\sarabun\" />
+    <Folder Include="assets\fonts-master\ofl\sarala\" />
+    <Folder Include="assets\fonts-master\ofl\sarina\" />
+    <Folder Include="assets\fonts-master\ofl\sarpanch\" />
+    <Folder Include="assets\fonts-master\ofl\scada\" />
+    <Folder Include="assets\fonts-master\ofl\scheherazade\" />
+    <Folder Include="assets\fonts-master\ofl\seaweedscript\" />
+    <Folder Include="assets\fonts-master\ofl\sedansc\" />
+    <Folder Include="assets\fonts-master\ofl\sedan\" />
+    <Folder Include="assets\fonts-master\ofl\seoulhangangcondensed\" />
+    <Folder Include="assets\fonts-master\ofl\seoulhangang\" />
+    <Folder Include="assets\fonts-master\ofl\seoulnamsancondensed\" />
+    <Folder Include="assets\fonts-master\ofl\seoulnamsanvertical\" />
+    <Folder Include="assets\fonts-master\ofl\seoulnamsan\" />
+    <Folder Include="assets\fonts-master\ofl\sevillana\" />
+    <Folder Include="assets\fonts-master\ofl\seymourone\" />
+    <Folder Include="assets\fonts-master\ofl\shadowsintolighttwo\" />
+    <Folder Include="assets\fonts-master\ofl\shadowsintolight\" />
+    <Folder Include="assets\fonts-master\ofl\shanti\" />
+    <Folder Include="assets\fonts-master\ofl\sharetechmono\" />
+    <Folder Include="assets\fonts-master\ofl\sharetech\" />
+    <Folder Include="assets\fonts-master\ofl\share\" />
+    <Folder Include="assets\fonts-master\ofl\shojumaru\" />
+    <Folder Include="assets\fonts-master\ofl\shortstack\" />
+    <Folder Include="assets\fonts-master\ofl\siamreap\" />
+    <Folder Include="assets\fonts-master\ofl\siemreap\" />
+    <Folder Include="assets\fonts-master\ofl\sigmarone\" />
+    <Folder Include="assets\fonts-master\ofl\signikanegative\" />
+    <Folder Include="assets\fonts-master\ofl\signika\" />
+    <Folder Include="assets\fonts-master\ofl\simonetta\" />
+    <Folder Include="assets\fonts-master\ofl\sintony\" />
+    <Folder Include="assets\fonts-master\ofl\sirinstencil\" />
+    <Folder Include="assets\fonts-master\ofl\sitara\" />
+    <Folder Include="assets\fonts-master\ofl\sixcaps\" />
+    <Folder Include="assets\fonts-master\ofl\skranji\" />
+    <Folder Include="assets\fonts-master\ofl\slabo13px\" />
+    <Folder Include="assets\fonts-master\ofl\slabo27px\" />
+    <Folder Include="assets\fonts-master\ofl\smythe\" />
+    <Folder Include="assets\fonts-master\ofl\sniglet\" />
+    <Folder Include="assets\fonts-master\ofl\snippet\" />
+    <Folder Include="assets\fonts-master\ofl\snowburstone\" />
+    <Folder Include="assets\fonts-master\ofl\sofadione\" />
+    <Folder Include="assets\fonts-master\ofl\sofia\" />
+    <Folder Include="assets\fonts-master\ofl\sonsieone\" />
+    <Folder Include="assets\fonts-master\ofl\sortsmillgoudy\" />
+    <Folder Include="assets\fonts-master\ofl\souliyo\" />
+    <Folder Include="assets\fonts-master\ofl\sourcecodepro\" />
+    <Folder Include="assets\fonts-master\ofl\sourcesanspro\" />
+    <Folder Include="assets\fonts-master\ofl\sourceserifpro\" />
+    <Folder Include="assets\fonts-master\ofl\spicyrice\" />
+    <Folder Include="assets\fonts-master\ofl\spinnaker\" />
+    <Folder Include="assets\fonts-master\ofl\spirax\" />
+    <Folder Include="assets\fonts-master\ofl\squadaone\" />
+    <Folder Include="assets\fonts-master\ofl\sreekrushnadevaraya\" />
+    <Folder Include="assets\fonts-master\ofl\sriracha\" />
+    <Folder Include="assets\fonts-master\ofl\stalemate\" />
+    <Folder Include="assets\fonts-master\ofl\stalinistone\" />
+    <Folder Include="assets\fonts-master\ofl\stalinone\" />
+    <Folder Include="assets\fonts-master\ofl\stardosstencil\" />
+    <Folder Include="assets\fonts-master\ofl\stintultracondensed\" />
+    <Folder Include="assets\fonts-master\ofl\stintultraexpanded\" />
+    <Folder Include="assets\fonts-master\ofl\stoke\" />
+    <Folder Include="assets\fonts-master\ofl\strait\" />
+    <Folder Include="assets\fonts-master\ofl\strong\" />
+    <Folder Include="assets\fonts-master\ofl\sueellenfrancisco\" />
+    <Folder Include="assets\fonts-master\ofl\sumana\" />
+    <Folder Include="assets\fonts-master\ofl\supermercadoone\" />
+    <Folder Include="assets\fonts-master\ofl\suranna\" />
+    <Folder Include="assets\fonts-master\ofl\suravaram\" />
+    <Folder Include="assets\fonts-master\ofl\sura\" />
+    <Folder Include="assets\fonts-master\ofl\suwannaphum\" />
+    <Folder Include="assets\fonts-master\ofl\swankyandmoomoo\" />
+    <Folder Include="assets\fonts-master\ofl\tangerine\" />
+    <Folder Include="assets\fonts-master\ofl\taprom\" />
+    <Folder Include="assets\fonts-master\ofl\tauri\" />
+    <Folder Include="assets\fonts-master\ofl\teko\" />
+    <Folder Include="assets\fonts-master\ofl\telex\" />
+    <Folder Include="assets\fonts-master\ofl\tenaliramakrishna\" />
+    <Folder Include="assets\fonts-master\ofl\tenorsans\" />
+    <Folder Include="assets\fonts-master\ofl\terminaldosislight\" />
+    <Folder Include="assets\fonts-master\ofl\terminaldosis\" />
+    <Folder Include="assets\fonts-master\ofl\textmeone\" />
+    <Folder Include="assets\fonts-master\ofl\thabit\" />
+    <Folder Include="assets\fonts-master\ofl\tharlon\" />
+    <Folder Include="assets\fonts-master\ofl\thegirlnextdoor\" />
+    <Folder Include="assets\fonts-master\ofl\tienne\" />
+    <Folder Include="assets\fonts-master\ofl\tillana\" />
+    <Folder Include="assets\fonts-master\ofl\timmana\" />
+    <Folder Include="assets\fonts-master\ofl\titanone\" />
+    <Folder Include="assets\fonts-master\ofl\titilliumweb\" />
+    <Folder Include="assets\fonts-master\ofl\tradewinds\" />
+    <Folder Include="assets\fonts-master\ofl\trocchi\" />
+    <Folder Include="assets\fonts-master\ofl\trochut\" />
+    <Folder Include="assets\fonts-master\ofl\trykker\" />
+    <Folder Include="assets\fonts-master\ofl\tuffy\" />
+    <Folder Include="assets\fonts-master\ofl\tulpenone\" />
+    <Folder Include="assets\fonts-master\ofl\uncialantiqua\" />
+    <Folder Include="assets\fonts-master\ofl\underdog\" />
+    <Folder Include="assets\fonts-master\ofl\unicaone\" />
+    <Folder Include="assets\fonts-master\ofl\unifrakturcook\" />
+    <Folder Include="assets\fonts-master\ofl\unifrakturmaguntia\" />
+    <Folder Include="assets\fonts-master\ofl\unlock\" />
+    <Folder Include="assets\fonts-master\ofl\unna\" />
+    <Folder Include="assets\fonts-master\ofl\vampiroone\" />
+    <Folder Include="assets\fonts-master\ofl\varelaround\" />
+    <Folder Include="assets\fonts-master\ofl\varela\" />
+    <Folder Include="assets\fonts-master\ofl\varta\" />
+    <Folder Include="assets\fonts-master\ofl\vastshadow\" />
+    <Folder Include="assets\fonts-master\ofl\vesperlibre\" />
+    <Folder Include="assets\fonts-master\ofl\vibur\" />
+    <Folder Include="assets\fonts-master\ofl\vidaloka\" />
+    <Folder Include="assets\fonts-master\ofl\viga\" />
+    <Folder Include="assets\fonts-master\ofl\voces\" />
+    <Folder Include="assets\fonts-master\ofl\volkhov\" />
+    <Folder Include="assets\fonts-master\ofl\vollkorn\" />
+    <Folder Include="assets\fonts-master\ofl\voltaire\" />
+    <Folder Include="assets\fonts-master\ofl\vt323\" />
+    <Folder Include="assets\fonts-master\ofl\waitingforthesunrise\" />
+    <Folder Include="assets\fonts-master\ofl\wallpoet\" />
+    <Folder Include="assets\fonts-master\ofl\warnes\" />
+    <Folder Include="assets\fonts-master\ofl\wellfleet\" />
+    <Folder Include="assets\fonts-master\ofl\wendyone\" />
+    <Folder Include="assets\fonts-master\ofl\wireone\" />
+    <Folder Include="assets\fonts-master\ofl\worksans\" />
+    <Folder Include="assets\fonts-master\ofl\yanonekaffeesatz\" />
+    <Folder Include="assets\fonts-master\ofl\yantramanav\" />
+    <Folder Include="assets\fonts-master\ofl\yesevaone\" />
+    <Folder Include="assets\fonts-master\ofl\yesteryear\" />
+    <Folder Include="assets\fonts-master\ofl\yinmar\" />
+    <Folder Include="assets\fonts-master\ofl\zeyada\" />
+    <Folder Include="assets\fonts-master\tools\encodings\" />
+    <Folder Include="assets\fonts-master\tools\util\" />
+    <Folder Include="assets\fonts-master\ufl\ubuntucondensed\" />
+    <Folder Include="assets\fonts-master\ufl\ubuntumono\" />
+    <Folder Include="assets\fonts-master\ufl\ubuntu\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64030</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/BlaFXWEB</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
